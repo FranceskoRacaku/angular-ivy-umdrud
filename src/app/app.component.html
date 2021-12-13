@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+
+<div>
+  Total amount of bill
+  <input [(ngModel)] = "foodCost" type="number">
+</div>
+
+<div> 
+  Total Percentage of Tip
+  <input [(ngModel)] = "tipPercentage" type="number">
+  <input type ="range" [(ngModel)] = "tipPercentage">
+  {{tipPercentage}}
+</div>
+
+<div>
+  <button (click)="calculate()">Calculate</button>
+</div>
+
+<div> Total Bill: </div>
+
+<hr />
+{{foodTotal | currency}}
